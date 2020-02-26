@@ -1,31 +1,22 @@
-import { ADD_ARTICLE, LOGOUT } from '../../Common/constant';
+import { ADD_USER, LOGOUT } from '../../Common/constant';
 
 const initialState = {
-  articles: []
+  user: []
 };
 
 function rootReducer(state = initialState, action) {
     switch (action.type) {
-        case ADD_ARTICLE:
+        case ADD_USER:
             return {
                 ...state,
-                articles: state.articles.concat(action.payload)
+                user: state.user.concat(action.payload)
             }
         case LOGOUT:
             return {
                 ...state,
-                articles: []
+                user: []
             }
     }
-//   if (action.type === ADD_ARTICLE) {
-//       return {
-//         ...state,
-//         articles: state.articles.concat(action.payload)
-//       }
-//     //   return Object.assign({}, state, {
-//     //       articles: state.articles.concat(action.payload)
-//     //   })
-//   }
   return state;
 }
 

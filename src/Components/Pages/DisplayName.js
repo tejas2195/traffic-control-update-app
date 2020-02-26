@@ -2,11 +2,11 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 const mapStateToProps = state => {
-    return { articles: state.articles };
+    return { user: state.user };
 }
 
-const ConnectedList = ({ articles }) => (
-    articles.map(el => (
+const ConnectedList = ({ user }) => (
+  user.map(el => (
       <div>Welcome {el.name}</div>
     ))
   );
