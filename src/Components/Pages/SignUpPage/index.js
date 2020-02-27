@@ -1,12 +1,12 @@
 import React from 'react';
 import firebase from '../../../firebase';
-import { addArticle } from './action';
+import { addUser } from './action';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
 function mapDispatchToProps(dispatch) {
     return {
-        addArticle: article => dispatch(addArticle(article))
+      addUser: user => dispatch(addUser(user))
     }
 }
 
@@ -37,7 +37,7 @@ class SignUpPage extends React.Component {
         locations: this.state.preferredLocations
     }
     itemsRef.push(users);
-    this.props.addArticle(users);
+    this.props.addUser(users);
     this.setState({
         userName: '',
         password: '',

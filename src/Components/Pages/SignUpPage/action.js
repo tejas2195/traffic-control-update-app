@@ -1,6 +1,6 @@
 import { ADD_USER, LOGOUT } from '../../Common/constant';
 
-export function addArticle(payload) {
+export function addUser(payload) {
     return { type: ADD_USER, payload };
   };
 
