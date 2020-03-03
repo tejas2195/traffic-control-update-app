@@ -13,7 +13,6 @@ class HomePage extends React.Component{
     }
 
     render(){
-        console.log('propsssss', this.props);
         return(
             <React.Fragment>
                 <div>Home Page</div>
